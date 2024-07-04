@@ -35,6 +35,7 @@ collections:
                   { label: "Text", name: "text", widget: "text" },
                 ],
             }
+          - { lable: "Tags", name: "tags", widget: "string" }
       - file: "content/about/index.md"
         label: "About"
         name: "about"
