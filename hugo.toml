@@ -1,0 +1,85 @@
+baseURL = 'https://kombiz.org/'
+languageCode = 'en-us'
+title = 'Fitness and Wellness Blog'
+theme = 'gallery'
+
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 20
+
+[[collections]]
+  name = "post"
+  lable = "Post"
+  folder = "content/post"
+  path = "{{slug}}/index"
+  create = true
+  [[collections.fields]]
+    label = "Title"
+    name = "title"
+    widget = "string"
+  [[collections.fields]]
+    label = "Publish Date"
+    name = "date"
+    widget = "datetime"
+  [[collections.fields]]
+    label = "Featured Image"
+    name = "image"
+    widget = "image"
+  [[collections.fields]]
+    label = "Body"
+    name = "body"
+    widget = "markdown"
+
+  [[collections]]
+  name = "pages"
+  lable = "Pages"
+   
+  [[collections.files]]
+    file = "content/_index.md"
+    label = "Home Page"
+    name = "home"
+    [[collections.files.fields]]
+      label = "Title"
+      name = "title"
+      widget = "string"    
+    [[collections.files.fields]]
+      label = "Blurb"
+      name = "blurb"
+      widget = "text"
+    [[collections.files.fields]]
+      label = "Section"
+      name = "section"
+      widget = "object"
+      [[collections.files.fields.fields]]
+        label = "Heading"
+        name = "heading"
+        widget = "string"   
+      [[collections.files.fields.fields]]
+        label = "Text"
+        name = "text"
+        widget = "text"               
+
+      
+                  
+  [[collections.files]]
+    file = "content/about/_index.md"
+    label = "About Page"
+    name = "about"
+    [[collections.files.fields]]
+      label = "Title"
+      name = "title"
+      widget = "string"
+    [[collections.files.fields]]
+      label = "Body"
+      name = "body"
+      widget = "text"
